@@ -39,12 +39,10 @@
     REST-ALEPH
     http://$HOST:$PORT/X?op=find-doc&doc_number=$NUMERO_SISTEMA&base=$BASE
     
-    http://{$config['HOST']}:{$config['PORT'}/X?op=find-doc&doc_number={$NUMERO_SISTEMA}&base={$config['BASE']}
-    
     $config ={
-        "HOST"=>"aleph.ecosur.mx",
-        "PORT"=>"8991",
-        "BASE"=>"CFS01_WEB"
+        "HOST"=>"example.com.mx",
+        "PORT"=>"3000",
+        "BASE"=>"BIB"
     }
 
 
