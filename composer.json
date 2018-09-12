@@ -1,0 +1,21 @@
+{
+    "name": "xjhernandez1234/xserver",
+    "description": "Módulo que permite hacer una conexión a la REST de ALEPH",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Germán de Jesus Hernández García",
+            "email": "gjhernandez@ecosur.mx"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "gjhernandez1234\\xserver\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
