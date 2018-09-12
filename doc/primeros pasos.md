@@ -48,6 +48,16 @@
     }
 
 
+GIT
+
+    git init
+    vi .gitignore
+    git add .
+    git remote add origin https://github.com/gjhernandez1234/xserver
+    git remote -v
+    git fetch
+    git push origin master
+
 
     
     
