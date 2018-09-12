@@ -1,6 +1,6 @@
-#Creando el primer paquete
+# Creando el primer paquete
 
-##Estructura de directorios
+## Estructura de directorios
 
 ``` 
  xserver
@@ -12,7 +12,7 @@
     `-- test
 ```
 
-##Comandos:
+## Comandos
 
 ```
     mkdir /var/www/html/nombre_persona
@@ -48,7 +48,7 @@
     }
 
 
-GIT
+##GIT (Resumen)
 
     git init
     vi .gitignore
@@ -57,6 +57,9 @@ GIT
     git remote -v
     git fetch
     git push origin master
+
+    git tag -a v1.0 -m 'version para el curso 1.0'
+    git push origin v1.0
 
 
     
