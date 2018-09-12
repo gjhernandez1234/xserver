@@ -61,6 +61,6 @@
     git tag -a v1.0 -m 'version para el curso 1.0'
     git push origin v1.0
 
-
+    git add . && git commit -m "modificando la documentacion" && git push origin master
     
     
