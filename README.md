@@ -19,12 +19,14 @@ Agregar al composer.json el siguiente paquete.
     ]
     ...
 ```
+
 Ejecutar el comando:
+
 ```bash
     composer update
 ```
 
-Uso
+##Uso
 
 ```php
 <?php
@@ -34,9 +36,9 @@ use gjhernandez1234\xserver\xServer;
 require "vendor/autoload.php";
 
 $config =array(
-        "HOST"=>"aleph.ecosur.mx",
-        "PORT"=>"8991",
-        "BASE"=>"CFS01_WEB"
+        "HOST"=>"example.com.mx",
+        "PORT"=>"3000",
+        "BASE"=>"BIB"
 	);
 
 $xServer = new xServer($config);
