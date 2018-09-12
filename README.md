@@ -1,10 +1,12 @@
-Xserver
+# Xserver
 
 Clase que controla las consultas realizadas al servicio de X-server de ALEPH
-Instalación
+
+## Instalación
 
 Agregar al composer.json el siguiente paquete.
 
+```json
     "require": {
         ...
         "gjhernandez1234/xserver":"dev-master"
@@ -16,10 +18,11 @@ Agregar al composer.json el siguiente paquete.
         }
     ]
     ...
-
+```
 Ejecutar el comando:
-
+```bash
     composer update
+```
 
 Uso
 
