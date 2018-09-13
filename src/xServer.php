@@ -46,22 +46,23 @@ class xServer
 
 	function getRegistroXML($NUMERO_SISTEMA)
 	{
-		if(isset($NUMERO_SISTEMA) and is_numeric($NUMERO_SISTEMA))
-		{
-			$client = new Client();
-			$req = "http://{$this->HOST}:{$this->PORT}/X?op=find-doc&doc_number={$NUMERO_SISTEMA}&base={$this->BASE}";
-        	$res = $client->request("GET", $req);
-	        echo $res->getStatusCode();
-            echo $res->getHeader('content-type');
-			echo $res->getBody();
-		}
+		try{
+			if(isset($NUMERO_SISTEMA) and is_numeric($NUMERO_SISTEMA))
+			{
+				$client = new Client();
+				$req = "http://{$this->HOST}:{$this->PORT}/X?op=find-doc&doc_number={$NUMERO_SISTEMA}&base={$this->BASE}";
+				$res = $client->request("GET", $req);
+				$xml = new \SimpleXMLElement($res->getBody()->getContents());
+				if($res->error)
+				{
+                    return $res->error;
+                }
+				return $res->asXML();
+			}   
+        }catch (\Exception $e){
+			throw new \Exception("Error [6543]: error al retornar el el xml ");
+        }
 	}
-
-	function saludo()
-	{
-		echo "Hola Mundo";
-	}
-
 }
 
 
