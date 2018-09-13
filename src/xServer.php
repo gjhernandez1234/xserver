@@ -52,15 +52,16 @@ class xServer
 				$client = new Client();
 				$req = "http://{$this->HOST}:{$this->PORT}/X?op=find-doc&doc_number={$NUMERO_SISTEMA}&base={$this->BASE}";
 				$res = $client->request("GET", $req);
+				
 				$xml = new \SimpleXMLElement($res->getBody()->getContents());
-				if($res->error)
+				if(isset($xml->error))
 				{
-                    return $res->error;
+                    return $xml->error;
                 }
-				return $res->asXML();
+				return $xml->asXML();
 			}   
         }catch (\Exception $e){
-			throw new \Exception("Error [6543]: error al retornar el el xml ");
+			throw new \Exception("Error [6543]: error al retornar el xml {$e}");
         }
 	}
 }
