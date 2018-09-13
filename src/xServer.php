@@ -3,8 +3,8 @@
 namespace gjhernandez1234\xserver;
 
 /**
- * @Description Clase que permite conectarse a la REST de ALEPH
- * @autor German de Jesus Hernandez Garcia
+ * Clase que permite conectarse a la REST de ALEPH
+ * @author German de Jesus Hernandez Garcia
  * @date 11/09/2018
  * @copyright SIBE
  *
